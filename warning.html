@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Phishing Warning</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #8b0000;
+      color: #ffffff;
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+      background-color: #b30000;
+      padding: 40px;
+      border-radius: 10px;
+      max-width: 600px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .alert-icon {
+      font-size: 60px;
+      margin-bottom: 20px;
+    }
+
+    .domain {
+      margin-top: 20px;
+      font-weight: bold;
+      word-break: break-all;
+    }
+
+    .note {
+      margin-top: 25px;
+      font-size: 14px;
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="alert-icon">⚠️</div>
+    <h1>Phishing Website Detected</h1>
+
+    <p>
+      This website has been identified as a <strong>potential phishing page</strong>.
+      It may attempt to steal your login credentials or personal information.
+    </p>
+
+    <p class="domain" id="domain">
+      Blocked Domain: Unknown
+    </p>
+
+    <p class="note">
+      Access to this page has been blocked by <strong>Phishing Guard</strong>
+      to protect your security.
+    </p>
+  </div>
+
+  <script>
+    // Optional: display blocked domain if available
+    const params = new URLSearchParams(window.location.search);
+    const domain = params.get("domain");
+    if (domain) {
+      document.getElementById("domain").textContent =
+        "Blocked Domain: " + domain;
+    }
+  </script>
+</body>
+</html>

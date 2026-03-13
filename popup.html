@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Phishing Guard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      width: 260px;
+      margin: 0;
+      padding: 15px;
+      background-color: #f4f4f4;
+    }
+
+    h2 {
+      margin-top: 0;
+      text-align: center;
+    }
+
+    .status {
+      text-align: center;
+      font-size: 18px;
+      margin: 10px 0;
+      font-weight: bold;
+    }
+
+    .safe { color: green; }
+    .suspicious { color: orange; }
+    .phishing { color: red; }
+
+    .info {
+      font-size: 14px;
+      margin: 8px 0;
+      word-break: break-all;
+    }
+
+    button {
+      width: 100%;
+      padding: 8px;
+      margin-top: 10px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h2>Phishing Guard</h2>
+
+  <div class="status" id="verdict">Loading...</div>
+
+  <div class="info">
+    <strong>Domain:</strong>
+    <div id="domain">-</div>
+  </div>
+
+  <div class="info">
+    <strong>Risk Score:</strong>
+    <span id="score">-</span>/100
+  </div>
+
+  <button id="whitelistBtn">Whitelist This Site</button>
+
+  <script src="popup.js"></script>
+</body>
+</html>
