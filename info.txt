@@ -1,0 +1,26 @@
+URL Lexical Analysis:
+
+  Length Check: Agar URL ki length 75 characters se jyada hai, toh use suspicious mark karein.
+
+  Special Characters: Phishing sites mein @, -, aur // (extra slashes) ka use jyada hota hai.
+
+  Subdomain Count: Agar URL mein 3 se jyada dots (.) hain, toh ye aksar fake hota hai (e.g., login.secure.paypal.verify.com).
+
+  IP Address in URL: Agar domain name ki jagah IP address (e.g., http://192.168.1.1/login) use ho raha hai, toh use block karein.
+
+
+
+
+HTML Analysis (via Content Scripts):
+
+  Action Attribute Check: Agar <form> ka action URL kisi doosre domain par data bhej raha hai, toh ye phishing ka sign hai.
+
+  Hidden Elements: Scammers aksar <iframe> use karte hain login pages ko hide karne ke liye.
+
+  Sensitive Input: Agar site par "password" ya "credit card" field hai lekin HTTPS nahi hai, toh turant alert dein.
+
+
+
+
+
+  

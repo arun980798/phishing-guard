@@ -4,7 +4,7 @@
 
 
 
-//main logic of the extension if popup ho na ho 
+//main logic of the extension if popup ho na ho ye kam karta rahega 
 
 let blacklist = [];
 let analysisCache = new Map(); // Store analysis results per tab
