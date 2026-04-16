@@ -21,6 +21,8 @@ fetch(chrome.runtime.getURL("rules/blacklist.json"))
 
 /**
  * Calculate final phishing risk score
+ * 
+ * 
  */
 async function calculateRiskScore(data) {
   let score = 0;
